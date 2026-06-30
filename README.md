@@ -16,7 +16,7 @@ inputs = {
   vshnpkgs.inputs.nixpkgs.follows = "nixpkgs";  # share nixpkgs, smaller closure
 };
 
-outputs = { self, nixpkgs, kharon, ... }: {
+outputs = { self, nixpkgs, vshnpkgs, ... }: {
   # ... your outputs
 };
 }
