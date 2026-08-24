@@ -60,6 +60,13 @@
           # poetry2nix cannot parse GraalPy ABI tags (graalpy242_311_native);
           # we only build for CPython, so drop those wheel entries.
           sed -i '/graalpy/d' poetry.lock
+
+          # poetry2nix's vendored pep599 arch table has no riscv64 entry, and
+          # pep600 looks it up strictly, so a manylinux_*_riscv64 wheel tag
+          # aborts evaluation on Linux (on Darwin the libc check short-circuits
+          # first, which is why this only breaks in CI). We never target
+          # riscv64, so drop those wheel entries.
+          sed -i '/riscv64/d' poetry.lock
         '';
     };
 
