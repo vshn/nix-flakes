@@ -4,18 +4,18 @@
 }:
 pkgs.buildGoLatestModule rec {
   pname = "kharon";
-  version = "1.8.0";
+  version = "1.8.1";
   owner = "vshn";
 
   src = fetchFromGitHub {
     owner = owner;
     repo = pname;
     rev = "v${version}";
-    hash = "sha256-Z2cEKdt8cYa6d6bpwASqyhMyMyR9V6Ap3c1SW1aFgUk=";
+    hash = "sha256-24pIh1ZbqUOOEowTzdbuZdgw38oxEPwykqchYNIBFYI=";
   };
 
   proxyVendor = true;
-  vendorHash = "sha256-WQphhZuX7uIHjSFJpqzBv83Tgt8kq2AXnwCSgCgg6tY=";
+  vendorHash = "sha256-Xh8Pd0vkNuJRS630BhYMrn9i6w+i1Iq2i1wyuSEeXl8=";
 
   subPackages = ["."];
 
