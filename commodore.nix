@@ -4,13 +4,13 @@
   poetry2nix,
   git ? pkgs.git,
 }: let
-  version = "1.35.0";
+  version = "1.35.1";
 
   src = fetchFromGitHub {
     owner = "projectsyn";
     repo = "commodore";
     rev = "v${version}";
-    hash = "sha256-9QtdYrWgdSP6VfhOaguZXWKA7X7aGcVx8sZhkYgc0Wk=";
+    hash = "sha256-EhvIdF2yyoWXeHirukGbMe1SSY7q0Oeu+MQQC2E85hM=";
   };
 
   # Upstream's pyproject.toml is written for poetry >= 2 (PEP-621 [project]
