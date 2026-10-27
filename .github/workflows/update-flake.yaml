@@ -12,7 +12,7 @@ jobs:
   bump-lock:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           ref: ${{ github.ref_name }} # Branch tip, not trigger SHA
 
@@ -43,7 +43,7 @@ jobs:
       max-parallel: 1 # Jobs push to the same branch; run sequentially to avoid conflicts
       fail-fast: false # One app failing to update should not block the others
     steps:
-      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           ref: ${{ github.ref_name }} # Branch tip — bump-lock and previous matrix jobs have pushed
 
